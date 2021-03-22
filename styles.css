@@ -1,5 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
 body {
   background-color: azure;
   box-sizing: border-box;
   font: 500 16px "Roboto";
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+header,
+footer {
+  text-align: center;
+  width: 80vw;
+  margin: 2rem auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  width: 80vw;
+  background-color: black;
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+.content div {
+  text-align: center;
+  padding: 50%;
+  height: 4rem;
+  background-color: lightblue;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    display: block;
+    width: 90vw;
+    padding: 1rem;
+  }
+
+  .content div {
+    margin: 40px auto;
+  }
 }
