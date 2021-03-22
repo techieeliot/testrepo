@@ -1,21 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
-body {
-  background-color: azure;
+* {
   box-sizing: border-box;
-  font: 500 16px "Roboto";
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: azure;
+  font: 500 16px "Roboto", sans-serif;
 }
 
 .container {
-  margin: 0 auto;
-  width: 100%;
+  display: block;
+  min-width: 50%;
+  max-width: 80%;
 }
 
 header,
 footer {
   text-align: center;
-  width: 80vw;
-  margin: 2rem auto;
+  max-width: 80vw;
+  min-width: 200px;
+  margin: 2rem 0;
 }
 
 .content {
@@ -23,17 +31,18 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 40px;
   grid-row-gap: 40px;
-  width: 80vw;
-  background-color: black;
+  width: 100%;
+  background-color: #3f3d3d;
   margin: 0 auto;
-  padding: 4rem;
+  border-radius: 1rem;
 }
 
 .content div {
   text-align: center;
-  padding: 50%;
+  padding: 25% 20%;
   height: 4rem;
   background-color: lightblue;
+  border-radius: 0.5rem;
 }
 
 footer {
@@ -42,13 +51,27 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
   .content {
     display: block;
-    width: 90vw;
     padding: 1rem;
   }
 
   .content div {
     margin: 40px auto;
+    width: 100px;
+    padding: 1rem 0.5rem;
+  }
+
+  footer {
+    display: block;
+  }
+
+  footer div {
+    margin: 20px auto;
   }
 }
